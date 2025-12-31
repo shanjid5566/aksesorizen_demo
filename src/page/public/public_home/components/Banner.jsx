@@ -1,4 +1,19 @@
-import React from 'react';
+import React from 'react'
+
+const stats = [
+  { value: '99.9%', label: 'Uptime Guarantee', color: 'text-purple-600' },
+  { value: '2.5s', label: 'Average Processing', color: 'text-blue-600' },
+  { value: '24/7', label: 'Customer Support', color: 'text-pink-600' },
+]
+
+function StatCard({ value, label, color }) {
+  return (
+    <div className="transform rounded-xl bg-white p-8 text-center shadow-lg transition hover:scale-105">
+      <div className={`mb-2 text-4xl font-bold ${color}`}>{value}</div>
+      <div className="text-gray-600">{label}</div>
+    </div>
+  )
+}
 
 export default function Banner() {
   return (
@@ -10,7 +25,7 @@ export default function Banner() {
           </h2>
 
           <div className="mt-4">
-            <span className="os-bold block bg-linear-to-r from-purple-700 to-purple-700 bg-clip-text text-5xl font-black text-[#0000] sm:text-5xl md:text-6xl lg:text-7xl">
+            <span className="os-bold block bg-clip-text text-5xl font-black text-transparent bg-gradient-to-r from-purple-700 to-violet-500 sm:text-5xl md:text-6xl lg:text-7xl">
               AKSESORIZEME
             </span>
           </div>
@@ -30,23 +45,12 @@ export default function Banner() {
           </div>
         </div>
 
-        <div class="mt-20 grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div class="transform rounded-xl bg-white p-8 text-center shadow-lg transition hover:scale-105">
-            <div class="mb-2 text-4xl font-bold text-purple-600">99.9%</div>
-            <div class="text-gray-600">Uptime Guarantee</div>
-          </div>
-
-          <div class="transform rounded-xl bg-white p-8 text-center shadow-lg transition hover:scale-105">
-            <div class="mb-2 text-4xl font-bold text-blue-600">2.5s</div>
-            <div class="text-gray-600">Average Processing</div>
-          </div>
-
-          <div class="transform rounded-xl bg-white p-8 text-center shadow-lg transition hover:scale-105">
-            <div class="mb-2 text-4xl font-bold text-pink-600">24/7</div>
-            <div class="text-gray-600">Customer Support</div>
-          </div>
+        <div className="mt-20 grid grid-cols-1 gap-8 md:grid-cols-3">
+          {stats.map((s) => (
+            <StatCard key={s.label} value={s.value} label={s.label} color={s.color} />
+          ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
