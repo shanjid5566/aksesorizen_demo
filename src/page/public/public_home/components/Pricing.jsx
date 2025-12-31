@@ -38,13 +38,13 @@ const plans = [
 const PlanCard = ({ plan }) => (
   <div className={plan.cardClass}>
     {plan.popular && (
-      <div className="mb-4 inline-block rounded-full bg-white px-3 py-1 text-sm font-bold text-purple-600">POPULAR</div>
+      <div className="mb-4 inline-block rounded-full bg-white px-3 py-1 text-sm font-bold text-purple-600 os-bold">POPULAR</div>
     )}
 
-    <h3 className={`mb-4 text-2xl font-bold ${plan.popular ? 'text-white' : ''}`}>{plan.title}</h3>
+    <h3 className={`mb-4 text-2xl os-bold ${plan.popular ? 'text-white' : ''}`}>{plan.title}</h3>
 
     <div className="mb-4">
-      <span className="text-4xl font-bold">{plan.price}</span>
+      <span className="text-4xl os-bold">{plan.price}</span>
       {plan.priceSuffix && <span className={plan.popular ? 'text-purple-100' : 'text-gray-600'}>{plan.priceSuffix}</span>}
     </div>
 
@@ -63,11 +63,11 @@ const PlanCard = ({ plan }) => (
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="w-full bg-gradient-to-br from-gray-50 to-gray-100 py-20">
+    <section id="pricing" className="w-full bg-gradient-to-br from-gray-50 to-gray-100 py-8 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">Simple Pricing</h2>
+        <h2 className="mb-12 text-center text-4xl os-bold text-gray-900">Simple Pricing</h2>
 
-        <div className="grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1  md:grid-cols-3 gap-4 md:gap-8">
           {plans.map((p) => (
             <PlanCard key={p.id} plan={p} />
           ))}
