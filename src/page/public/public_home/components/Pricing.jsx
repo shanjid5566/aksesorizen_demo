@@ -8,7 +8,7 @@ const plans = [
     price: '$0',
     priceSuffix: '/month',
     features: ['2.9% + $0.30 per transaction', 'Basic support', 'Up to $10K/month'],
-    cardClass: 'rounded-xl bg-white p-8 shadow-lg transition hover:shadow-2xl',
+    cardClass: 'scale-95 md:scale-100 rounded-xl bg-white p-8 shadow-lg transition hover:shadow-2xl',
     btnClass: 'w-full rounded-lg bg-gray-200 py-3 font-semibold text-gray-800 transition hover:bg-gray-300',
     iconClass: 'text-green-500',
   },
@@ -18,7 +18,7 @@ const plans = [
     price: '$49',
     priceSuffix: '/month',
     features: ['2.5% + $0.25 per transaction', 'Priority support', 'Up to $100K/month', 'Advanced analytics'],
-    cardClass: 'scale-105 transform rounded-xl bg-gradient-to-br from-purple-600 to-blue-600 p-8 text-white shadow-2xl',
+    cardClass: 'md:scale-105 transform rounded-xl bg-gradient-to-br from-purple-600 to-blue-600 p-8 text-white shadow-2xl',
     btnClass: 'w-full rounded-lg bg-white py-3 font-semibold text-purple-600 transition hover:bg-gray-100',
     iconClass: 'text-white',
     popular: true,
@@ -29,7 +29,7 @@ const plans = [
     price: 'Custom',
     priceSuffix: '',
     features: ['Custom rates', '24/7 dedicated support', 'Unlimited volume', 'Custom integrations'],
-    cardClass: 'rounded-xl bg-white p-8 shadow-lg transition hover:shadow-2xl',
+    cardClass: 'scale-95 md:scale-100 rounded-xl bg-white p-8 shadow-lg transition hover:shadow-2xl',
     btnClass: 'w-full rounded-lg bg-gray-200 py-3 font-semibold text-gray-800 transition hover:bg-gray-300',
     iconClass: 'text-green-500',
   },
@@ -67,7 +67,7 @@ const Pricing = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">Simple Pricing</h2>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:gap-8 md:grid-cols-3">
           {plans.map((p) => (
             <PlanCard key={p.id} plan={p} />
           ))}

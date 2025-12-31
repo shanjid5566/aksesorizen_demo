@@ -116,5 +116,127 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
+    // <nav className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white">
+    //   <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    //     <div className="flex h-16 items-center justify-between">
+    //       <div className="flex items-center space-x-3">
+    //         <div className="flex items-center space-x-2">
+    //           <img alt="AKSESORIZEME" className="h-28 w-auto" src="/logo.png" />
+    //         </div>
+    //       </div>
+    //       <div className="hidden items-center space-x-8 lg:flex">
+    //         <a
+    //           href="#features"
+    //           className="font-medium text-gray-700 transition-colors hover:text-purple-600"
+    //         >
+    //           Features
+    //         </a>
+    //         <a
+    //           href="#pricing"
+    //           className="font-medium text-gray-700 transition-colors hover:text-purple-600"
+    //         >
+    //           Pricing
+    //         </a>
+    //         <a
+    //           href="#contact"
+    //           className="font-medium text-gray-700 transition-colors hover:text-purple-600"
+    //         >
+    //           Contact
+    //         </a>
+    //       </div>
+    //       <div className="flex items-center space-x-6">
+    //         <button
+    //           className="hidden text-gray-600 transition-colors hover:text-purple-600 md:block"
+    //           aria-label="Search"
+    //         >
+    //           <svg
+    //             xmlns="http://www.w3.org/2000/svg"
+    //             width="24"
+    //             height="24"
+    //             viewBox="0 0 24 24"
+    //             fill="none"
+    //             stroke="currentColor"
+    //             stroke-width="2"
+    //             stroke-linecap="round"
+    //             stroke-linejoin="round"
+    //             className="lucide lucide-search h-5 w-5"
+    //             aria-hidden="true"
+    //           >
+    //             <path d="m21 21-4.34-4.34"></path>
+    //             <circle cx="11" cy="11" r="8"></circle>
+    //           </svg>
+    //         </button>
+    //         <button
+    //           className="hidden text-gray-600 transition-colors hover:text-purple-600 md:block"
+    //           aria-label="Account"
+    //         >
+    //           <svg
+    //             xmlns="http://www.w3.org/2000/svg"
+    //             width="24"
+    //             height="24"
+    //             viewBox="0 0 24 24"
+    //             fill="none"
+    //             stroke="currentColor"
+    //             stroke-width="2"
+    //             stroke-linecap="round"
+    //             stroke-linejoin="round"
+    //             className="lucide lucide-user h-5 w-5"
+    //             aria-hidden="true"
+    //           >
+    //             <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+    //             <circle cx="12" cy="7" r="4"></circle>
+    //           </svg>
+    //         </button>
+    //         <button
+    //           className="relative hidden text-gray-600 transition-colors hover:text-purple-600 md:block"
+    //           aria-label="Cart"
+    //         >
+    //           <svg
+    //             xmlns="http://www.w3.org/2000/svg"
+    //             width="24"
+    //             height="24"
+    //             viewBox="0 0 24 24"
+    //             fill="none"
+    //             stroke="currentColor"
+    //             stroke-width="2"
+    //             stroke-linecap="round"
+    //             stroke-linejoin="round"
+    //             className="lucide lucide-shopping-cart h-5 w-5"
+    //             aria-hidden="true"
+    //           >
+    //             <circle cx="8" cy="21" r="1"></circle>
+    //             <circle cx="19" cy="21" r="1"></circle>
+    //             <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+    //           </svg>
+    //           <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-purple-600 text-xs font-bold text-white">
+    //             0
+    //           </span>
+    //         </button>
+    //         <button
+    //           className="text-gray-700 transition-colors hover:text-purple-600 lg:hidden"
+    //           aria-label="Menu"
+    //         >
+    //           <svg
+    //             xmlns="http://www.w3.org/2000/svg"
+    //             width="24"
+    //             height="24"
+    //             viewBox="0 0 24 24"
+    //             fill="none"
+    //             stroke="currentColor"
+    //             stroke-width="2"
+    //             stroke-linecap="round"
+    //             stroke-linejoin="round"
+    //             className="lucide lucide-menu h-6 w-6"
+    //             aria-hidden="true"
+    //           >
+    //             <path d="M4 5h16"></path>
+    //             <path d="M4 12h16"></path>
+    //             <path d="M4 19h16"></path>
+    //           </svg>
+    //         </button>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </nav>
   );
 }
