@@ -13,7 +13,7 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <nav className="z-50 bg-white">
+    <nav className="z-50 bg-white shadow-sm border-b border-gray-200 py-1">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-4">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
@@ -22,7 +22,7 @@ export default function Navbar() {
               className="flex items-center gap-2 font-semibold text-gray-900"
               aria-label="Aksesorizeme home"
             >
-              <img src="/logo.png" alt="Aksesorizeme Logo" className="h-24 w-auto md:h-30" />
+              <img src="/logo.png" alt="Aksesorizeme Logo" className="h-30 w-auto md:h-30" />
             </a>
           </div>
 
@@ -72,12 +72,21 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div
-        className={`origin-top transform transition-all duration-200 md:hidden ${open ? 'scale-y-100 opacity-100' : 'pointer-events-none scale-y-0 opacity-0'}`}
-        role="dialog"
-        aria-hidden={!open}
-      >
-        <div className="border-t border-gray-100 bg-white px-4 pt-4 pb-6">
+      {/* Backdrop */}
+      {open && (
+        <div
+          onClick={() => setOpen(false)}
+          className="fixed inset-0 z-40 md:hidden"
+          aria-hidden="true"
+        />
+      )}
+
+      <div className="md:hidden fixed inset-x-0 top-16 z-50" role="dialog" aria-hidden={!open}>
+        <div
+          className={`transform transition-all duration-300 ease-in-out ${
+            open ? 'translate-y-0 opacity-100 pointer-events-auto' : '-translate-y-2 opacity-0 pointer-events-none'
+          } border-t border-gray-100 bg-white px-4 pt-4 pb-6 shadow-lg`}
+        >
           <div className="flex flex-col space-y-3">
             <a href="#features" onClick={() => setOpen(false)} className="os-medium text-gray-800">
               Features
