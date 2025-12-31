@@ -43,7 +43,7 @@ export default function Banner() {
           </div>
         </div>
 
-        <div className="mt-8 md:mt-14 lg:mt-20 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="mt-8 md:mt-14 lg:mt-20 grid grid-cols-1  md:grid-cols-3 gap-4 md:gap-8">
           {stats.map((s) => (
             <StatCard key={s.label} value={s.value} label={s.label} color={s.color} />
           ))}

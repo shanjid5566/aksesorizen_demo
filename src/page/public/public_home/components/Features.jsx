@@ -32,18 +32,18 @@ const FeatureCard = ({ feature }) => (
       {feature.icon}
     </div>
 
-    <h3 className="mb-2 text-xl font-semibold">{feature.title}</h3>
-    <p className="text-gray-600">{feature.desc}</p>
+    <h3 className="mb-2 text-xl os-semibold text-black">{feature.title}</h3>
+    <p className="text-[#4a5565]">{feature.desc}</p>
   </div>
 );
 
 const Features = () => {
   return (
-    <section id="features" className="w-full bg-white py-20">
+    <section id="features" className="w-full bg-white py-8 md:py-20">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="mb-12 text-center text-4xl font-bold text-gray-900">Why Choose Us?</h2>
+        <h2 className="mb-12 text-center text-4xl os-bold text-gray-900">Why Choose Us?</h2>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
           {features.map((f) => (
             <FeatureCard key={f.id} feature={f} />
           ))}
